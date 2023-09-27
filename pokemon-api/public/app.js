@@ -11,7 +11,6 @@ function getPokemonById(id) {
         let abilities = data.abilities;
         let forms = data.forms;
         let poke = new Pokemon(name, img, types, abilities, forms);
-        console.log(poke);
         return poke;
     });
 }
@@ -26,12 +25,23 @@ window.onload = function () {
             const img = document.createElement("img");
             img.src = pokemon.img;
             img.setAttribute("data-pokemon-id", id.toString());
+            console.log(pokemon.type[0].type.name, "type");
             img.addEventListener("click", function () {
                 const pokemonId = this.getAttribute("data-pokemon-id");
-                const cardImg = document.getElementById('cardImg');
+                const cardImg = document.getElementById("cardImg");
                 cardImg.src = pokemon.img;
-                const pokename = document.getElementById('pokeName');
+                const pokename = document.getElementById("pokeName");
                 pokename.innerText = pokemon.name;
+                const poketype = document.getElementById("pokeType");
+                poketype.innerText = pokemon.type.map((e) => (e.type.name)).toString().toUpperCase();
+                const pokeabl = document.getElementById("pokeAbl");
+                // const abilities= pokemon.abilities.map((e:any)=>(e.ability.name));
+                // abilities.forEach((element: string) => {
+                //   let li = document.createElement('li');
+                //   li.innerText = element;
+                //   pokeabl.appendChild(li);
+                // });
+                // console.log(pokemon.type ,"type");
                 modal.style.display = "block";
             });
             pokemonSec.appendChild(img);

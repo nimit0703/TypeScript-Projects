@@ -1,6 +1,18 @@
 /* styles.css */
 body {
     font-family: Arial, sans-serif;
+  background-color: cadetblue;
+  }
+  img{
+    margin: 20px;
+    /* border: 2px solid #fefefe; */
+    transition: transform 0.3s; /* Add a smooth transition effect */
+  }
+  img:hover{
+    margin: 20px;
+    /* border: 2px solid #fefefe; */
+    transform: scale(1.2); /* Increase the size by 10% (adjust as needed) */
+
   }
   
   .pokemon-gallery {
@@ -67,3 +79,9 @@ body {
     color: orange;
   }
   
+
+  li{
+    list-style-type:none;
+    color: rgb(255, 48, 21);
+    text-decoration: none;
+  }
