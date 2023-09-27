@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    text-decoration: none;    
+
+}
+body{
+    background-color: #bda1ff;
+}
+#HeaderTitle{
+    text-align: center;
+    margin: 20px;
+    font-size: 3rem;
+    color: #713ced;
+}
+
+
+.container img{
+    background-image: cover;
+    border-radius: 20px;
+    width: 1240px;
+    height: 725px;
+    border: 2px solid rgb(0, 0, 0);
+}
+.container img:hover{
+    border-radius: 20px;
+    border: 2px solid #e15454;
+}
+
+
+p{
+
+    margin-top: 20px;
+    font-size: 2em;
+}
+a:link{
+    text-decoration: none;
+    color: black;
+    
+}

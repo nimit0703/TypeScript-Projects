@@ -21,7 +21,7 @@ window.onload = function () {
   const closeBtn = document.getElementById("close")!;
   const pokemonSec = document.getElementById("pokemons")!;
 
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i < 70; i++) {
     const id = randomNumber(1, 500);
     getPokemonById(id).then(
       (pokemon: {
