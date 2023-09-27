@@ -38,18 +38,8 @@ window.onload = function () {
           const pokename = document.getElementById( "pokeName" ) as HTMLDivElement;
           pokename.innerText = pokemon.name;
           const poketype = document.getElementById("pokeType") as HTMLDivElement;
-          poketype.innerText  = pokemon.type.map((e:any)=>(e.type.name)).toString().toUpperCase();
+          poketype.innerText  = pokemon.type.map((e:any)=>(e.type.name)).toString();
           const pokeabl = document.getElementById("pokeAbl") as HTMLUListElement;
-          // const abilities= pokemon.abilities.map((e:any)=>(e.ability.name));
-          // abilities.forEach((element: string) => {
-          //   let li = document.createElement('li');
-          //   li.innerText = element;
-          //   pokeabl.appendChild(li);
-          // });
-
-
-
-          // console.log(pokemon.type ,"type");
           modal.style.display = "block";
         });
         pokemonSec.appendChild(img);

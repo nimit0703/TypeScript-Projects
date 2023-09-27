@@ -42,20 +42,26 @@ body {
   }
   
   .modal-content {
-    background-color: #fefefe;
+    background-color: darkcyan;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: auto;
     padding: 20px;
-    position: relative;
     width: 80%;
     max-width: 800px;
   }
   
   .close {
-    position: absolute;
+    /* position: absolute; */
+    color: #fff;
     top: 10px;
     right: 10px;
     cursor: pointer;
-    font-size: 24px;
+    font-size: 4vw;
   }
   
   .card {
@@ -65,17 +71,25 @@ body {
   }
   .card img{
     margin-left: 70px;
+    max-width: 500px;
+  }
+  .card img{
+    margin-left: 70px;
+    max-width: 500px;
   }
   #cardData{
     text-align: center;
     margin-right: 170px;
   }
   #pokeName{
-    font-size: 3vw;
-    color: rgb(60, 135, 255);
+    text-transform: capitalize;
+    font-size: 4vw;
+    color: #fff;
   }
   #pokeType{
-    font-size: 1.5vw;
+    text-transform: capitalize;
+    margin:2% 0;
+    font-size: 2vw;
     color: orange;
   }
   
