@@ -110,3 +110,10 @@
   background-color: rgba(100, 89, 250, 0.516);
 }
 
+#animation{
+  border: none;
+  display: none;
+}
+#succ-ani{
+  border: none;
+}

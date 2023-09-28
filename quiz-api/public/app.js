@@ -45,6 +45,7 @@ function displayQue(quizData) {
     que.innerText = quizData.que;
     let opctionBtn = document.querySelectorAll(".opt button");
     quizData.options.push(quizData.ans);
+    quizData.options = _.shuffle(quizData.options);
     for (let i = 0; i < 4; i++) {
         let btn = opctionBtn[i];
         btn.innerText = quizData.options[i];
@@ -62,7 +63,7 @@ function displayQue(quizData) {
                     const queNo = document.getElementById('que-no');
                     queNo.innerText = count.toString();
                     opt.style.backgroundColor = "transparent";
-                }, 3000);
+                }, 1000);
             }
             else {
                 count = 0;
@@ -74,7 +75,7 @@ function displayQue(quizData) {
                     queNo.innerText = count.toString();
                     opt.style.backgroundColor = "transparent";
                     startGame();
-                }, 3000);
+                }, 1000);
             }
         });
     }

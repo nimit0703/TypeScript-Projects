@@ -1,5 +1,6 @@
 import { QuizData } from "./classes/QuizData.js";
 
+
 const intro = document.getElementById("intro") as HTMLDivElement;
 const quizPage = document.getElementById("quizPage") as HTMLDivElement;
 const playBtn = document.getElementById("btn") as HTMLButtonElement;
@@ -43,6 +44,9 @@ function displayQue(quizData: QuizData) {
   que.innerText = quizData.que;
   let opctionBtn = document.querySelectorAll(".opt button");
   quizData.options.push(quizData.ans);
+
+  quizData.options = _.shuffle(quizData.options);
+
   for (let i = 0; i < 4; i++) {
     let btn = opctionBtn[i] as HTMLButtonElement;
     btn.innerText = quizData.options[i];
@@ -62,7 +66,7 @@ function displayQue(quizData: QuizData) {
             const queNo = document.getElementById('que-no') as HTMLSpanElement;
             queNo.innerText = count.toString();
             opt.style.backgroundColor = "transparent";
-        }, 3000);
+        }, 1000);
       } else {
         count = 0;
         let opt = btn.closest(".opt") as HTMLDivElement;
@@ -73,7 +77,7 @@ function displayQue(quizData: QuizData) {
             queNo.innerText = count.toString();
             opt.style.backgroundColor = "transparent";
             startGame()
-        }, 3000);
+        }, 1000);
       }
     });
   }
