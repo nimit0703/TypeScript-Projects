@@ -8,6 +8,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import { QuizData } from "./classes/QuizData.js";
+let _;
 const intro = document.getElementById("intro");
 const quizPage = document.getElementById("quizPage");
 const playBtn = document.getElementById("btn");

@@ -1,5 +1,5 @@
 import { QuizData } from "./classes/QuizData.js";
-
+let _:any;
 
 const intro = document.getElementById("intro") as HTMLDivElement;
 const quizPage = document.getElementById("quizPage") as HTMLDivElement;
